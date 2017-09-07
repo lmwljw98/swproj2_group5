@@ -1,6 +1,6 @@
 def factorial_for(num):
     sum_val = 1
-    for i in range(1,num+1):
+    for i in range(1, num+1):
         sum_val *= i
     return sum_val
 
@@ -25,7 +25,7 @@ def factorial_memoization(num):
 
 
 def factorial(num):
-    print("%d! = %d"%(num,factorial_for(num)))
+    print("%d! = %d"%(num, factorial_for(num)))
 
     
 if __name__ == "__main__":
