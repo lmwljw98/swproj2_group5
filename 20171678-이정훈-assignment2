@@ -6,8 +6,6 @@ def factorial(n):
 
     print("%d! = " %n, result)
                 
-
-
 n = int(input("Enter a number: "))
 while n != -1:
     factorial(n)
