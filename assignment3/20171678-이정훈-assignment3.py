@@ -44,7 +44,7 @@ def doScoreDB(scdb):
                     p['Score'] += parse[2]
         elif parse[0] == 'find':
             tmp_scdb = scdb
-            tmp_scdb = sorted(tmp_scdb)
+            tmp_scdb = sorted(tmp_scdb, key=parse[1])
             for p in tmp_scdb:
                 while p['Name'] != parse[1]:
                     scdb.pop()
