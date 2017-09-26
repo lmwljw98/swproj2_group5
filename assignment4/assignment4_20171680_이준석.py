@@ -9,14 +9,9 @@ def Combination (n, m):
 n = int(input("Enter n:"))
 m = int(input("Enter m:"))
 
-if n >= m or (n and m) >= 0:
-    while n < m or (n and m) < 0:
+if n >= m:
+    while n != -1:
+        C = Combination(n, m)
+        print("C(%d, %d) = %d" %(n, m, C))
         n = int(input("Enter n:"))
-        m = int(input("Enter m:"))
-
-while n != -1:
-    C = Combination(n, m)
-    print("C(%d, %d) = %d" %(n, m, C))
-    n = int(input("Enter n:"))
-    if n != -1:
         m = int(input("Enter m:"))
