@@ -29,6 +29,7 @@ n = int(input("Enter n: "))
 m = int(input("Enter m: "))
 while n != -1:
     combination_rec(n, m)
+    combination(n, m)
     n = int(input("Enter n: "))
     m = int(input("Enter m: "))
 
