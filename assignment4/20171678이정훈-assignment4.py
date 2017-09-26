@@ -6,7 +6,7 @@ def combination_rec(n, m):
     elif n == m:
         return 1
 
-    elif n <= m:
+    elif n < m:
         return 0
 
     else:
