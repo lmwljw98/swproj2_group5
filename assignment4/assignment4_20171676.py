@@ -24,6 +24,8 @@ if __name__ == "__main__":
             break
         elif n < r:
             print("Incorrect input.")
+        elif n <= -1 or r <= -1:
+            print("Incorrect input.")
         else:
             origin_n = n
             print(str(n) + "C" + str(r) + " =", int(upper(n) / lower(r)))
