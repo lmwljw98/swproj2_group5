@@ -1,6 +1,8 @@
 import time
 
 def iterfibo(n):
+    if n == 0 or n == 1:
+        return n
     f1 = 0
     f2 = 1
     number = 2
