@@ -28,7 +28,7 @@ while True:
     fibonumber = iterfibo(n)
     ts = time.time() - ts
     print("IterFibo(%d) = %d, time %.6f" %(n, fibonumber, ts))
-    ts = time.time()
+    ts1 = time.time()
     fibonumber = fibo(n)
-    ts = time.time() - ts
-    print("Fibo(%d) = %d, time %.6f" %(n, fibonumber, ts))
+    ts1 = time.time() - ts1
+    print("Fibo(%d) = %d, time %.6f" %(n, fibonumber, ts1))
