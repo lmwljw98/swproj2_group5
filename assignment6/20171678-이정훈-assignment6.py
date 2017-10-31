@@ -120,11 +120,9 @@ class ScoreDB(QWidget):
             if p['Name'] == self.nameInput.text():
                 p['Score'] += self.scoreInput.text()
 
-    def showScoreDB(self):
-        for p in sorted(scdb, key=lambda person: person[keyname]):
-            for attr in sorted(p):
-                print(attr + "=" + p[attr], end=' ')
-            print()
+    def showDB(self):
+        sortKey = 'Name' if len(parse) == 1 else parse[1]
+        showScoreDB(self.scoredb, sortKey)
 
 
 
