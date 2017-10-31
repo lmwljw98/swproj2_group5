@@ -35,9 +35,11 @@ def doScoreDB(scdb):
             record = {'Name':parse[1], 'Age':parse[2], 'Score':parse[3]}
             scdb += [record]
         elif parse[0] == 'del':
-            for p in scdb:
-                if p['Name'] == parse[1]:
-                    scdb.remove(p)
+            for i in range(len(scdb)):
+                for j in scdb:
+                    if j['Name'] == parse[1]:
+                        scdb.remove(j)
+                        break
         elif parse[0] == 'inc':
             for p in scdb:
                 if p['Name'] == parse[1]:
