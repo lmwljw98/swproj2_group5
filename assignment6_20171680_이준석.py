@@ -63,8 +63,11 @@ class ScoreDB(QWidget):
         btn_find.clicked.connect(self.findDB)
         btn_inc.clicked.connect(self.incDB)
 
-        combobox_key = QComboBox(self)
-        combobox_key.move(415,50)
+        self.combobox_key = QComboBox()
+        self.combobox_key.addItem("Name", 1)
+        self.combobox_key.addItem("Age", 2)
+        self.combobox_key.addItem("Score", 3)
+        self.combobox_key.move(415,50)
 
 
         self.setGeometry(300, 300, 500, 250)
@@ -98,7 +101,11 @@ class ScoreDB(QWidget):
         fH.close()
 
     def showScoreDB(self):
-        pass
+        keyname = self.combobox_key.currentText()
+        self.result.setText("")
+        for p in sorted(self.scoredb, key=lambda person: person[keyname]):
+            self.result.append("Age = " + str(p['Age']) + "    Name = " + p['Name'] + "        Score = " + str(p['Score']))
+
 
     def addDB(self):
         record = {'Name': self.lineedit_name.text(), 'Age': self.lineedit_age.text(), 'Score': self.lineedit_score.text()}
