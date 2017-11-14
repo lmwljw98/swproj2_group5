@@ -93,7 +93,6 @@ class Calculator(QWidget):
         elif key == 'C':
             self.display.clear()
 
-
         elif key in numPadList or operatorList:
             self.display.setText(self.display.text() + key)
 
@@ -115,7 +114,7 @@ class Calculator(QWidget):
                 resultOper = 'Error!'
             self.display.setText(resultOper)
 
-
+            
 if __name__ == '__main__':
 
     import sys
